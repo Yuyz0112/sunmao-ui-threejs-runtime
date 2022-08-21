@@ -1,5 +1,5 @@
 import SunmaoEditor from './SunmaoEditor';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import React from 'react';
 import { RouteComponent } from '../../src/components/Router';
 
@@ -12,9 +12,4 @@ export default function Editor() {
   );
 }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Editor />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+createRoot(document.getElementById('root')!).render(<Editor />);

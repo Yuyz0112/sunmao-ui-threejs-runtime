@@ -1,28 +1,17 @@
 export type RouteConfig = {
   name: string;
   path: string;
-}
-
+};
 export type RedirectConfig = {
   path: string;
-  redirect: string;  
-}
-
+  redirect: string;
+};
 export type Config = RouteConfig | RedirectConfig;
-
 const routes: Config[] = [
   {
     path: '*',
-    redirect: '/login',
+    redirect: '/webgl',
   },
-  {
-    name: 'admin',
-    path: '/admin',
-  },
-  {
-    name: 'login',
-    path: '/login',
-  },
+  { name: 'webgl', path: '/webgl' },
 ];
-
 export default routes;

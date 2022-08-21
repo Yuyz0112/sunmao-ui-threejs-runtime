@@ -1,5 +1,5 @@
 import SunmaoApp from './SunmaoApp';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import React from 'react';
 import { RouteComponent } from './components/Router';
 import type { Application, ComponentSchema } from '@sunmao-ui/core';
@@ -41,9 +41,4 @@ export default function App() {
   );
 }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+createRoot(document.getElementById('root')!).render(<App />);

@@ -1,0 +1,135 @@
+{
+  "kind": "Application",
+  "version": "custom/v1",
+  "metadata": {
+    "name": "webgl"
+  },
+  "spec": {
+    "components": [
+      {
+        "id": "canvas0",
+        "type": "webgl/v1/canvas",
+        "properties": {
+          "orbitControls": {
+            "rotate": true,
+            "zoom": true
+          }
+        },
+        "traits": []
+      },
+      {
+        "id": "ambient_light2",
+        "type": "webgl/v1/ambient_light",
+        "properties": {},
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "canvas0",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "point_light3",
+        "type": "webgl/v1/point_light",
+        "properties": {
+          "position": {
+            "x": 10,
+            "y": 20,
+            "z": -1000
+          }
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "canvas0",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "cloud5",
+        "type": "webgl/v1/cloud",
+        "properties": {
+          "position": {
+            "x": 1,
+            "y": 2,
+            "z": 3
+          },
+          "speed": 0.2,
+          "opacity": 0.25
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "canvas0",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "cloud6",
+        "type": "webgl/v1/cloud",
+        "properties": {
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "speed": 2,
+          "opacity": 1
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "canvas0",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "sky4",
+        "type": "webgl/v1/sky",
+        "properties": {
+          "azimuth": 0.1,
+          "turbidity": 10,
+          "rayleigh": 0.3,
+          "inclination": 0.6,
+          "distance": 1000
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "canvas0",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
